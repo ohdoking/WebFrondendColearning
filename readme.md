@@ -1,6 +1,6 @@
-#studying project in berlin
+# studying project in berlin
 
-##about webpack
+## about webpack
 
 ### webpack is consist of 4 part
 - entry
@@ -14,13 +14,13 @@ It uses to everything that is kind of javascript and stylesheet and image and so
 Its start point is "entry".
 Webpack binds one file after loading module that needs through the entry.
 
----
+```
 module.exports = {
   entry: {
     main: './src/main.js',
   }
 }
----
+```
 
 ### output
 
