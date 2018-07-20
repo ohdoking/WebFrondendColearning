@@ -78,14 +78,28 @@ module.exports = {
 }
 ```
 
-*로더를 사용하기 위해서는 노드 패키지로 제공하는 로더를 npm으로 추가해야한다.*
 * To use loader have to add loader that supported node package
+  (로더를 사용하기 위해서는 노드 패키지로 제공하는 로더를 npm으로 추가해야한다.)
 ```
 npm i --save-dev babel-loader babel-core babel-preset-env
 ```
 
 ### plugin
 
+Loader treat to file unit, Plugin treat bundled result stuff.
+It can use to extract specific text or obfuscate bundled javascript.
+(로더가 파일단위로 처리하는 반면 플러그인은 번들된 결과물을 처리한다. 번들된 자바스크립트를 난독화 한다거나 특정 텍스트를 추출하는 용도로 사용할 수 있다.)
+
+#### example
+```
+const webpack = require('webpack')
+
+module.exports = {
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin(),
+  ]
+}
+```
 
 ## reference 
 - http://blog.jeonghwan.net/js/2017/05/15/webpack.html
